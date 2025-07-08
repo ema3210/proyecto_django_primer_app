@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Bienvenido a mi sitio {% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    {% block card %}
+    <div class="card">
+        <h1>¡Hola, Mundo!</h1>
+        <p>Este es un ejemplo simple pero con estilo usando solo HTML y CSS.</p>
+        <p>Creado por vos, con 💙 y un poco de código.</p>
+        <a href="https://chat.openai.com" target="_blank">Ir a ChatGPT</a>
+    </div>
+    {% endblock %}
+</body>
+</html>

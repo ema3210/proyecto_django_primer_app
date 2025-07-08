@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+{% block title %} Cursos {% endblock %}
+
+ {% block card %}
+
+    <h2>Buscar cursos </h2>
+    <form method='GET' action='{% url 'buscar-cursos' %}'>
+        <input type='text' name='nombre' placeholder='buscar curso...' value='{{ nombre }}'>
+        <button type='submit'>Buscar</button>
+    </form>
+
+    <h2> Cursos: </h2>
+
+    <ul>
+        {%for curso in cursos %}
+            <li>{{curso.nombre}}</li>
+        {% empty %}
+            <li>No hay cursos disponible.</li>
+        {% endfor %}
+    </ul>
+    
+    {% endblock %} 
+
+    

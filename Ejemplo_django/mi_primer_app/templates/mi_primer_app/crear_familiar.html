@@ -1,0 +1,15 @@
+
+{% extends "padre.html" %}
+
+{% block title %} Crear Familiar {% endblock %}
+
+ {% block card %}
+
+    <h2>Crear Familiar</h2>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>Guardar</button>
+    </form>
+    
+    {% endblock %} 
